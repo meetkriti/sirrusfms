@@ -1,0 +1,183 @@
+{
+  "_note": "[ASSUMPTION] Realistic IFM checklist set proposed by Sirrus. Paradigm to confirm actual templates, frequencies and photo requirements.",
+  "templates": [
+    {
+      "id": "hk_staircase", "name": "Staircase sweeping and mopping", "service_line": "housekeeping",
+      "locations": ["A-STAIR", "B-STAIR", "C-STAIR", "D-STAIR"],
+      "frequency": "daily", "due_times": ["09:00"], "send_offset_min": 90, "grace_min": 30,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-01",
+      "items": [
+        { "id": "sweep", "label": "All floors swept (G to 16)", "type": "yes_no" },
+        { "id": "mop", "label": "Mopped with floor cleaner", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of staircase", "type": "photo" }
+      ]
+    },
+    {
+      "id": "hk_lift_lobby", "name": "Lift lobby and lift car cleaning", "service_line": "housekeeping",
+      "locations": ["A-LOBBY", "B-LOBBY", "C-LOBBY", "D-LOBBY"],
+      "frequency": "twice_daily", "due_times": ["09:30", "16:30"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-02",
+      "items": [
+        { "id": "lobby", "label": "Lobby floor and glass cleaned", "type": "yes_no" },
+        { "id": "car", "label": "Lift car mirror, panel and floor cleaned", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of lift lobby", "type": "photo" }
+      ]
+    },
+    {
+      "id": "hk_basement", "name": "Basement sweeping", "service_line": "housekeeping",
+      "locations": ["BASE-1", "BASE-2"],
+      "frequency": "weekly", "weekday": 3, "due_times": ["11:00"], "send_offset_min": 120, "grace_min": 60,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-03",
+      "items": [
+        { "id": "sweep", "label": "Driveway and parking bays swept", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of basement", "type": "photo" }
+      ]
+    },
+    {
+      "id": "hk_garbage", "name": "Garbage segregation and collection point", "service_line": "housekeeping",
+      "locations": ["GARBAGE-PT"],
+      "frequency": "daily", "due_times": ["08:00"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-04",
+      "items": [
+        { "id": "seg", "label": "Wet / dry / reject segregated", "type": "yes_no" },
+        { "id": "handover", "label": "Handed over to BBMP vehicle", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of collection point", "type": "photo" }
+      ]
+    },
+    {
+      "id": "hk_washroom", "name": "Clubhouse washrooms", "service_line": "housekeeping",
+      "locations": ["CLUB-WR"],
+      "frequency": "twice_daily", "due_times": ["10:00", "17:00"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-05",
+      "items": [
+        { "id": "clean", "label": "Floors, WC and wash basins cleaned", "type": "yes_no" },
+        { "id": "refill", "label": "Hand wash and tissue refilled", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of washroom", "type": "photo" }
+      ]
+    },
+    {
+      "id": "sec_handover", "name": "Shift handover and guard deployment", "service_line": "security",
+      "locations": ["MAIN-GATE"],
+      "frequency": "per_shift", "due_times": ["06:15", "14:15", "22:15"], "send_offset_min": 30, "grace_min": 15,
+      "photo_required": false, "mode": "stepwise",
+      "assignee_by_time": { "06:15": "sup_sec", "14:15": "sec_sup2", "22:15": "sec_sup3" }, "sop": "SOP-SEC-01",
+      "items": [
+        { "id": "guards", "label": "Guards reported on duty", "type": "numeric_reading", "min": 8, "max": 12, "unit": "guards" },
+        { "id": "posts", "label": "All posts manned (main gate, service gate, towers, basement)", "type": "yes_no" },
+        { "id": "remarks", "label": "Handover remarks", "type": "text" }
+      ]
+    },
+    {
+      "id": "sec_patrol", "name": "Night patrol rounds (checkpoints)", "service_line": "security",
+      "locations": ["PRJ"],
+      "frequency": "per_shift", "shift": "night", "due_times": ["02:00"], "send_offset_min": 120, "grace_min": 30,
+      "photo_required": true, "mode": "stepwise", "assignee": "sec_sup3", "sop": "SOP-SEC-02",
+      "items": [
+        { "id": "checkpoints", "label": "Checkpoints scanned (of 12)", "type": "numeric_reading", "min": 12, "max": 12, "unit": "checkpoints" },
+        { "id": "photo", "label": "Photo at last checkpoint", "type": "photo" }
+      ]
+    },
+    {
+      "id": "sec_register", "name": "Visitor and vehicle register check", "service_line": "security",
+      "locations": ["MAIN-GATE"],
+      "frequency": "daily", "due_times": ["20:00"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": false, "mode": "quick", "assignee": "sup_sec", "sop": "SOP-SEC-03",
+      "items": [
+        { "id": "visitor", "label": "Visitor register complete", "type": "yes_no" },
+        { "id": "vehicle", "label": "Vehicle register complete", "type": "yes_no" }
+      ]
+    },
+    {
+      "id": "tech_pump", "name": "Pump room log (pressure, run hours)", "service_line": "water",
+      "locations": ["PUMP-ROOM"],
+      "frequency": "daily", "due_times": ["08:30"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": false, "mode": "stepwise", "assignee": "sup_tech", "sop": "SOP-TEC-01",
+      "items": [
+        { "id": "pressure", "label": "Hydro-pneumatic pressure", "type": "numeric_reading", "min": 2.5, "max": 4.5, "unit": "bar" },
+        { "id": "run_hours", "label": "Transfer pump run hours (since yesterday)", "type": "numeric_reading", "min": 2, "max": 14, "unit": "h" }
+      ]
+    },
+    {
+      "id": "tech_dg", "name": "DG set weekly test run", "service_line": "electromechanical",
+      "locations": ["DG-YARD"],
+      "frequency": "weekly", "weekday": 6, "due_times": ["11:00"], "send_offset_min": 120, "grace_min": 60,
+      "photo_required": true, "mode": "stepwise", "assignee": "sup_tech", "sop": "SOP-TEC-02",
+      "items": [
+        { "id": "fuel", "label": "Diesel level", "type": "numeric_reading", "min": 40, "max": 100, "unit": "%" },
+        { "id": "run_min", "label": "Test run duration", "type": "numeric_reading", "min": 15, "max": 60, "unit": "min" },
+        { "id": "photo", "label": "Photo of DG panel", "type": "photo" }
+      ]
+    },
+    {
+      "id": "tech_fire", "name": "Fire extinguisher and hydrant check", "service_line": "technical",
+      "locations": ["PRJ"],
+      "frequency": "monthly", "day_of_month": 5, "due_times": ["12:00"], "send_offset_min": 180, "grace_min": 120,
+      "photo_required": true, "mode": "quick", "assignee": "sup_tech", "sop": "SOP-TEC-03",
+      "items": [
+        { "id": "ext", "label": "Extinguisher pressure gauges in green", "type": "yes_no" },
+        { "id": "hydrant", "label": "Hydrant valves and hose reels checked", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of tag", "type": "photo" }
+      ]
+    },
+    {
+      "id": "tech_lift_amc", "name": "Lift AMC visit log", "service_line": "technical",
+      "locations": ["TWR-A", "TWR-B", "TWR-C", "TWR-D"],
+      "frequency": "monthly", "day_of_month": 12, "due_times": ["15:00"], "send_offset_min": 180, "grace_min": 120,
+      "photo_required": false, "mode": "quick", "assignee": "sup_tech", "sop": "SOP-TEC-04",
+      "items": [
+        { "id": "visit", "label": "AMC technician visited and signed log", "type": "yes_no" }
+      ]
+    },
+    {
+      "id": "stp_log", "name": "STP operation log", "service_line": "stp",
+      "locations": ["STP-ROOM"],
+      "frequency": "per_shift", "due_times": ["10:00", "18:00", "02:00"], "send_offset_min": 60, "grace_min": 30,
+      "photo_required": true, "mode": "stepwise",
+      "assignee_by_time": { "10:00": "stp_op1", "18:00": "stp_op2", "02:00": "stp_op3" }, "sop": "SOP-STP-01",
+      "items": [
+        { "id": "ph", "label": "pH (outlet)", "type": "numeric_reading", "min": 6.5, "max": 8.5, "unit": "" },
+        { "id": "mlss", "label": "MLSS", "type": "numeric_reading", "min": 2500, "max": 4500, "unit": "mg/L" },
+        { "id": "blower_hours", "label": "Blower run hours (this shift)", "type": "numeric_reading", "min": 4, "max": 8, "unit": "h" },
+        { "id": "photo", "label": "Photo of outlet sample (clarity)", "type": "photo" }
+      ]
+    },
+    {
+      "id": "land_watering", "name": "Garden watering", "service_line": "landscaping",
+      "locations": ["GARDEN"],
+      "frequency": "daily", "due_times": ["07:30"], "send_offset_min": 60, "grace_min": 60,
+      "photo_required": false, "mode": "quick", "assignee": "sup_land", "sop": "SOP-LND-01",
+      "items": [ { "id": "water", "label": "Lawns, beds and pots watered", "type": "yes_no" } ]
+    },
+    {
+      "id": "land_mowing", "name": "Lawn mowing and hedge trimming", "service_line": "landscaping",
+      "locations": ["GARDEN"],
+      "frequency": "weekly", "weekday": 5, "due_times": ["16:00"], "send_offset_min": 180, "grace_min": 60,
+      "photo_required": true, "mode": "quick", "assignee": "sup_land", "sop": "SOP-LND-02",
+      "items": [
+        { "id": "mow", "label": "Lawn mowed", "type": "yes_no" },
+        { "id": "hedge", "label": "Hedges trimmed", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of central lawn", "type": "photo" }
+      ]
+    },
+    {
+      "id": "pest_control", "name": "Common-area pest control", "service_line": "housekeeping",
+      "locations": ["PRJ"],
+      "frequency": "monthly", "day_of_month": 20, "due_times": ["15:00"], "send_offset_min": 240, "grace_min": 120,
+      "photo_required": true, "mode": "quick", "assignee": "sup_hk", "sop": "SOP-HK-06",
+      "items": [
+        { "id": "spray", "label": "Gel / spray treatment done in common areas", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of service report", "type": "photo" }
+      ]
+    },
+    {
+      "id": "water_tank", "name": "Overhead and underground tank cleaning", "service_line": "water",
+      "locations": ["PRJ"],
+      "frequency": "quarterly", "anchor_date": "2026-09-19", "every_days": 91, "due_times": ["16:00"], "send_offset_min": 360, "grace_min": 240,
+      "photo_required": true, "mode": "quick", "assignee": "sup_tech", "sop": "SOP-TEC-05",
+      "items": [
+        { "id": "clean", "label": "Tanks drained, scrubbed and disinfected", "type": "yes_no" },
+        { "id": "photo", "label": "Photo of cleaned tank", "type": "photo" }
+      ]
+    }
+  ]
+}

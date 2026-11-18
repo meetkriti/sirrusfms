@@ -1,0 +1,56 @@
+{
+  "_note": "[ASSUMPTION] Default rules proposed by Sirrus. Editable live on the Settings > Alert rules page.",
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Task not started by due time",
+      "trigger": "task_not_started_at_due",
+      "enabled": true,
+      "offset_min": 0,
+      "notify": ["assignee"],
+      "severity": "info",
+      "send_whatsapp": true
+    },
+    {
+      "id": "R2",
+      "name": "Not done by due time + grace period",
+      "trigger": "task_overdue",
+      "enabled": true,
+      "use_template_grace": true,
+      "grace_override_min": null,
+      "notify": ["supervisor", "fm"],
+      "severity": "warning",
+      "send_whatsapp": true
+    },
+    {
+      "id": "R3",
+      "name": "Same checklist missed repeatedly",
+      "trigger": "recurring_miss",
+      "enabled": true,
+      "count": 3,
+      "window_days": 7,
+      "notify": ["zonal", "fm"],
+      "severity": "high",
+      "send_whatsapp": false
+    },
+    {
+      "id": "R4",
+      "name": "Reading out of acceptable range",
+      "trigger": "reading_out_of_range",
+      "enabled": true,
+      "notify": ["tech_supervisor", "fm"],
+      "severity": "high",
+      "send_whatsapp": true
+    },
+    {
+      "id": "R5",
+      "name": "Security headcount below contract at shift start",
+      "trigger": "security_headcount_below_contract",
+      "enabled": true,
+      "notify": ["security_supervisor", "fm", "finance"],
+      "severity": "high",
+      "billing_impact": true,
+      "send_whatsapp": true
+    }
+  ]
+}

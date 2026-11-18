@@ -1,0 +1,19 @@
+{
+  "_note": "[ASSUMPTION] Paradigm's billing software import format is unknown. Column mapping is editable in the Meters page.",
+  "file_name": "lakeshore_greens_meter_readings_{cycle}",
+  "date_format": "DD-MM-YYYY",
+  "columns": [
+    { "key": "unit", "header": "Unit No", "enabled": true },
+    { "key": "meter_id", "header": "Meter ID", "enabled": true },
+    { "key": "meter_type", "header": "Meter Type", "enabled": true },
+    { "key": "previous", "header": "Previous Reading", "enabled": true },
+    { "key": "current", "header": "Current Reading", "enabled": true },
+    { "key": "consumption", "header": "Consumption", "enabled": true },
+    { "key": "reading_date", "header": "Reading Date", "enabled": true },
+    { "key": "captured_by", "header": "Captured By", "enabled": true },
+    { "key": "photo", "header": "Photo Link", "enabled": true },
+    { "key": "status", "header": "Validation Status", "enabled": true },
+    { "key": "flags", "header": "Flags", "enabled": false },
+    { "key": "confidence", "header": "Extraction Confidence", "enabled": false }
+  ]
+}

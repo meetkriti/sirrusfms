@@ -1,0 +1,33 @@
+{
+  "_note": "[ASSUMPTION] SLA matrix proposed by Sirrus. Escalation 'after_min' is measured from ticket creation. Editable in Settings.",
+  "priorities": {
+    "P1": {
+      "examples": "Lift stuck, water outage, security breach, STP failure",
+      "response_min": 15,
+      "resolution_min": 240,
+      "escalation": [
+        { "level": "L2", "after_min": 30 },
+        { "level": "L3", "after_min": 120 },
+        { "level": "L4", "after_min": 240 }
+      ]
+    },
+    "P2": {
+      "examples": "Pump fault, odour, lighting failure in common area",
+      "response_min": 60,
+      "resolution_min": 1440,
+      "escalation": [
+        { "level": "L2", "after_min": 240 },
+        { "level": "L3", "after_min": 1440 }
+      ]
+    },
+    "P3": {
+      "examples": "Cleaning lapse, landscaping request",
+      "response_min": 240,
+      "resolution_min": 4320,
+      "escalation": [
+        { "level": "L2", "after_min": 1440 },
+        { "level": "L3", "after_min": 4320 }
+      ]
+    }
+  }
+}

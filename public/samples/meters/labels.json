@@ -1,0 +1,82 @@
+[
+  {
+    "file": "meter_B1204.png",
+    "serial": "WM-455775",
+    "unit_label": "B-1204",
+    "reading": 2094.3,
+    "confidence": 0.95,
+    "note": "Abnormal jump: ~3.8× the 3-month average (possible leak or misread)"
+  },
+  {
+    "file": "meter_A0302.png",
+    "serial": "WM-776072",
+    "unit_label": "A-0302",
+    "reading": 935.2,
+    "confidence": 0.97,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_A0705.png",
+    "serial": "WM-590529",
+    "unit_label": "A-0705",
+    "reading": 453.4,
+    "confidence": 0.96,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_B0601.png",
+    "serial": "WM-631629",
+    "unit_label": "B-0601",
+    "reading": 2142.7,
+    "confidence": 0.98,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_C1103.png",
+    "serial": "WM-902794",
+    "unit_label": "C-1103",
+    "reading": 1019.2,
+    "confidence": 0.96,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_C1506.png",
+    "serial": "WM-199517",
+    "unit_label": "C-1506",
+    "reading": 570.3,
+    "confidence": 0.95,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_D0204.png",
+    "serial": "WM-560920",
+    "unit_label": "D-0204",
+    "reading": 587.2,
+    "confidence": 0.97,
+    "note": "Normal"
+  },
+  {
+    "file": "meter_D0902.png",
+    "serial": "WM-156583",
+    "unit_label": "D-0902",
+    "reading": 984.8,
+    "confidence": 0.94,
+    "note": "Reading lower than previous (meter replaced or misread)"
+  },
+  {
+    "file": "meter_C0805.png",
+    "serial": "WM-569750",
+    "unit_label": "C-0805",
+    "reading": 1474.9,
+    "confidence": 0.62,
+    "note": "Blurred photo, low confidence"
+  },
+  {
+    "file": "meter_unknown.png",
+    "serial": "WM-999999",
+    "unit_label": "?-??0?",
+    "reading": 742.6,
+    "confidence": 0.9,
+    "note": "Serial not in meter master, unit label smudged"
+  }
+]

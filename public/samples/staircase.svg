@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+<rect width="400" height="300" fill="#e2e8f0"/><rect x="40" y="220" width="360" height="28" fill="#94a3b8"/><rect x="85" y="192" width="315" height="28" fill="#cbd5e1"/><rect x="130" y="164" width="270" height="28" fill="#94a3b8"/><rect x="175" y="136" width="225" height="28" fill="#cbd5e1"/><rect x="220" y="108" width="180" height="28" fill="#94a3b8"/><rect x="265" y="80" width="135" height="28" fill="#cbd5e1"/><rect x="310" y="52" width="90" height="28" fill="#94a3b8"/><rect x="20" y="40" width="8" height="200" fill="#475569"/><path d="M28 60 L340 20" stroke="#475569" stroke-width="6"/>
+<rect x="0" y="262" width="400" height="38" fill="rgba(15,23,42,.72)"/>
+<text x="14" y="286" font-family="Arial, sans-serif" font-size="15" fill="#fff">Staircase, after mopping</text>
+<text x="386" y="286" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">SAMPLE IMAGE</text></svg>

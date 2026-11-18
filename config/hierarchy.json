@@ -1,0 +1,55 @@
+{
+  "_note": "[ASSUMPTION] Paradigm has not confirmed its hierarchy. Titles, levels and owners are editable here.",
+  "levels": [
+    { "level": "L0", "title": "Ground staff", "channel": "WhatsApp only", "dashboard": false },
+    { "level": "L1", "title": "Site Supervisor", "channel": "WhatsApp only", "dashboard": false },
+    { "level": "L2", "title": "Facility Manager", "channel": "WhatsApp + dashboard", "dashboard": true },
+    { "level": "L3", "title": "Zonal Manager", "channel": "Dashboard", "dashboard": true },
+    { "level": "L4", "title": "Operations Head", "channel": "Dashboard + chat", "dashboard": true }
+  ],
+  "roles": [
+    { "id": "ground", "label": "Ground staff (L0)", "level": "L0", "defaultRoute": "/tasks", "phoneOwner": "stp_op1" },
+    { "id": "supervisor", "label": "Site Supervisor (L1)", "level": "L1", "defaultRoute": "/tasks", "phoneOwner": "sup_hk" },
+    { "id": "fm", "label": "Facility Manager (L2)", "level": "L2", "defaultRoute": "/dashboard", "phoneOwner": "fm" },
+    { "id": "zonal", "label": "Zonal Manager (L3)", "level": "L3", "defaultRoute": "/tickets?view=escalations", "phoneOwner": "fm" },
+    { "id": "ops_head", "label": "Operations Head (L4)", "level": "L4", "defaultRoute": "/insights", "phoneOwner": "fm" },
+    { "id": "finance", "label": "Finance / Billing", "level": "-", "defaultRoute": "/billing", "phoneOwner": "fm" },
+    { "id": "client", "label": "Client (Association)", "level": "-", "defaultRoute": "/report", "phoneOwner": "client_sec" }
+  ],
+  "owners": {
+    "L1": {
+      "housekeeping": "sup_hk",
+      "security": "sup_sec",
+      "technical": "sup_tech",
+      "stp": "sup_tech",
+      "landscaping": "sup_land",
+      "water": "sup_tech",
+      "electromechanical": "sup_tech"
+    },
+    "L2": "fm",
+    "L3": "zonal",
+    "L4": "ops_head"
+  },
+  "categoryToServiceLine": {
+    "Housekeeping": "housekeeping",
+    "Security": "security",
+    "Plumbing": "technical",
+    "Electrical": "technical",
+    "Lift": "technical",
+    "STP/Odour": "stp",
+    "Water Supply": "technical",
+    "Landscaping": "landscaping",
+    "Pest Control": "housekeeping",
+    "Other": "technical"
+  },
+  "alertRoleTargets": {
+    "assignee": "Assignee (L0/L1)",
+    "supervisor": "Site Supervisor",
+    "tech_supervisor": "Technical Supervisor",
+    "security_supervisor": "Security Supervisor",
+    "fm": "Facility Manager",
+    "zonal": "Zonal Manager",
+    "ops_head": "Operations Head",
+    "finance": "Finance"
+  }
+}

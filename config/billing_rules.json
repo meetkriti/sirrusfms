@@ -1,0 +1,25 @@
+{
+  "_note": "[ASSUMPTION] All rates are clearly fake sample rates. Taxes and invoice numbering are handled in Paradigm's billing software.",
+  "security": {
+    "guard_rate_per_man_day": 850,
+    "supervisor_rate_per_man_day": 1050,
+    "contracted_guards_per_shift": 8,
+    "contracted_supervisors_per_shift": 1,
+    "count_approved_replacements": true,
+    "count_unapproved_replacements": false,
+    "half_day_factor": 0.5
+  },
+  "fixed_monthly": [
+    { "service_line": "housekeeping", "label": "Housekeeping services (20 staff, as per agreement)", "amount": 460000 },
+    { "service_line": "technical", "label": "Technical / engineering services (6 staff)", "amount": 210000 },
+    { "service_line": "stp", "label": "STP operation (3 operators)", "amount": 105000 },
+    { "service_line": "landscaping", "label": "Landscaping services (4 staff)", "amount": 96000 }
+  ],
+  "consumables": {
+    "require_acknowledgement": true
+  },
+  "project_work": {
+    "bill_on": "delivered_quantity",
+    "only_approved_quotations": true
+  }
+}
